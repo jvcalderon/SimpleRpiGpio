@@ -1,0 +1,19 @@
+{
+    "name": "simple-rpi-gpio",
+    "description": "Very simple module for Node.JS to Raspberry PI's GPIO port usage",
+    "author": "José Vte. Calderón Cabrera <jvcalcab@gmail.com>",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jvcalderon/SimpleRpiGpio"
+    },
+    "bugs": {
+        "url": "https://github.com/jvcalderon/SimpleRpiGpio/issues"
+    },
+    "keywords": [
+        "GPIO",
+        "Raspberry PI",
+        "RPI",
+        "Node.JS"
+    ],
+    "license": "MIT"
+}
