@@ -1,5 +1,6 @@
 {
     "name": "simple-rpi-gpio",
+    "version": "0.1",
     "description": "Very simple module for Node.JS to Raspberry PI's GPIO port usage",
     "author": "José Vte. Calderón Cabrera <jvcalcab@gmail.com>",
     "repository": {
