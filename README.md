@@ -3,6 +3,10 @@ SimpleRpiGpio
 
 Very simple class to Raspberry PI's GPIO port usage
 
+## Requirements
+- Node.js
+- NPM
+
 ## Installation
 
 You can install the library with NPM:
