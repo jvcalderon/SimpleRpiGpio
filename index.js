@@ -46,9 +46,9 @@ SimpleRpiGpio.prototype.open = function (pinNumber, direction) {
     if (gpioNumber !== false &&
         (direction == 'in' || direction == 'out')) {
         this.exec(
-            'echo ' + gpioNumber + ' > /sys/class/gpio/unexport &' +
-            'echo ' + gpioNumber + ' > /sys/class/gpio/export &' +
-            'echo ' + direction + ' > /sys/class/gpio/gpio' + gpioNumber + '/direction'
+            'echo ' + gpioNumber + ' > /sys/class/gpio/unexport; ' +
+                'echo ' + gpioNumber + ' > /sys/class/gpio/export; ' +
+                'echo ' + direction + ' > /sys/class/gpio/gpio' + gpioNumber + '/direction'
         );
     }
     else {
@@ -61,10 +61,10 @@ SimpleRpiGpio.prototype.open = function (pinNumber, direction) {
  *
  * @param direction in or out
  */
-SimpleRpiGpio.prototype.openAll = function(direction) {
-    for(pinNumber in this.pinMapping) {
-        if(this.pinMapping.hasOwnProperty(pinNumber)) {
-            this.open(this.pinMapping[pinNumber], direction);
+SimpleRpiGpio.prototype.openAll = function (direction) {
+    for (pinNumber in this.pinMapping) {
+        if (this.pinMapping.hasOwnProperty(pinNumber)) {
+            this.open(pinNumber, direction);
         }
     }
 };
@@ -111,4 +111,4 @@ SimpleRpiGpio.prototype.getGpioNumber = function (pinNumber) {
     return false;
 };
 
-module.exports = SimpleRpiGpio;
+module.exports = new SimpleRpiGpio;
