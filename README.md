@@ -13,7 +13,7 @@ Now you only need to require SimpleRpiGpio in your project:
 
 <pre><code>var gpio = require('SimpleRpiGpio');</code></pre>
 
-In Raspberry PI, only root can use GPIO pin. You have to install [quick2wire-gpio-admin](https://github.com/quick2wire/quick2wire-gpio-admin) to use the library without sudo. if you haven't yet installed this plugin, you can do it as follows:
+In Raspberry PI, only root can use GPIO pin. You have to install [quick2wire-gpio-admin](https://github.com/quick2wire/quick2wire-gpio-admin) to use the library without sudo. if you haven't yet installed this library, you can do it as follows:
 
 <pre><code>$ git clone git://github.com/quick2wire/quick2wire-gpio-admin.git
 $ cd quick2wire-gpio-admin
