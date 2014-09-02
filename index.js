@@ -46,8 +46,8 @@ SimpleRpiGpio.prototype.open = function (pinNumber, direction) {
     if (gpioNumber !== false &&
         (direction == 'in' || direction == 'out')) {
         this.exec(
-            'echo ' + gpioNumber + ' > /sys/class/gpio/unexport; ' +
-                'echo ' + gpioNumber + ' > /sys/class/gpio/export; ' +
+            'gpio-admin unexport ' + gpioNumber + ';' +
+                'gpio-admin export ' + gpioNumber + ';' +
                 'echo ' + direction + ' > /sys/class/gpio/gpio' + gpioNumber + '/direction'
         );
     }
